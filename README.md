@@ -1,4 +1,4 @@
-he primary focus of this assignment was on implementing the core functional requirements:
+The primary focus of this assignment was on implementing the core functional requirements:
 
 - RESTful API design
 - Server-side pagination
