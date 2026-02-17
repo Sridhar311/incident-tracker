@@ -106,7 +106,7 @@ const getIncidentById = async (req, res) => {
 const updateIncident = async (req, res) => {
   try {
     const { id } = req.params;
-    const { status, owner, summary } = req.body;
+    const { status, owner, summary ,severity} = req.body;
 
     const incident = await Incident.findById(id);
 
@@ -119,6 +119,7 @@ const updateIncident = async (req, res) => {
 
     // Only update allowed fields
     if (status) incident.status = status;
+    if (severity) incident.severity = severity;
     if (owner) incident.owner = owner;
     if (summary) incident.summary = summary;
 
